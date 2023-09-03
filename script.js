@@ -18,7 +18,7 @@ let SearchWhereIm;
 let Videos = [
   {
     ThumImg: '/iV/Thumbnail.jpg',
-    ChannelProfImg: '/iV/ProfilePic.jpg',
+    ChannelProfImg: '/IMG-20230831-WA0000.jpg',
     ChannelProfLink: 'Url',
     VidTitle: 'Express Js Pro player',
     ChannelName: 'Bro',
