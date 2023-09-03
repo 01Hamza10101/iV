@@ -906,7 +906,7 @@ KnldgeNotificationBtn.addEventListener('click', function() {
 
 
 let SubscribedData = Array.from({ length: 15 }, (_, i) => ({
-  channelIconUrl: '/iV/ProfilePic.jpg',
+  channelIconUrl: '/IMG-20230831-WA0000.jpg',
   channelName: `Channel ${i + 1}`,
   IsSubscribed: 'true',
 }));
