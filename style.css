@@ -1,0 +1,703 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+*::selection {
+  background-color: black;
+  color: #fff;
+}
+
+html,
+body {
+  height: 100vh;
+  background: #fff;
+  color: black;
+}
+
+.Main {
+  height: 100vh;
+  width: 100vw;
+}
+
+.NavBar {
+  height: 7vh;
+  border-bottom: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #fff;
+  position: relative;
+  width: 100vw;
+}
+
+.NavBarleft {
+  font-weight: 600;
+  font-size: 5vh;
+  letter-spacing: 3px;
+}
+
+.NavBarRight {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20vw;
+}
+
+.FooterNavBar {
+  bottom: 0px;
+  height: 7vh;
+  width: 100vw;
+  background-color: #fff;
+  border-top: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem 1rem 2rem;
+  position: fixed;
+}
+
+.FooterNavBarleft {
+  transition: all ease .5s;
+}
+
+.FooterNavBarMiddle {
+  transition: all ease .5s;
+}
+
+.FooterNavBarRight {
+  transition: all ease .5s;
+}
+
+.MainBody {
+  height: calc(100vh - 14vh);
+  overflow: auto;
+}
+
+.MainBodyHome {
+  display: block;
+  position: relative;
+}
+
+.VideoCart {
+  height: auto;
+  display: block;
+}
+
+.VideoCartUpPart {
+  height: 270px;
+}
+
+.Thumbnail img {
+  width: 100vw;
+}
+
+.VideoCartLowPart {}
+
+.VidCartPlay {
+  transition: height 0.3s;
+}
+
+.VideoCartLower {
+  height: calc(100% - 80%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem .5rem 0rem .5rem;
+}
+
+.VideoProfile {
+  border: 2px solid black;
+  border-radius: 50%;
+  margin-left: 8px;
+  width: 12vw;
+  height: 12vw;
+  overflow: hidden;
+}
+
+.VideoProfileImg {
+  width: auto;
+  height: 100%;
+}
+
+.VideoTitle {
+  height: 100%;
+  width: calc(100% - 20%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.VideoTitleUpper {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 550;
+  line-height: 1;
+}
+
+.VideoTitleLower {
+  display: flex;
+  color: #555;
+  justify-content: space-between;
+  font-size: 11px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  padding-right: 25px;
+}
+
+.VidDiscription {
+  padding-top: .5rem;
+  border-radius: 1rem 1rem;
+  min-height: 40vh;
+}
+
+.VidDisTitle p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 550;
+  font-size: 18px;
+  margin: 5px 12px 0px 12px;
+}
+
+.VidDisActBar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.VidDisActBar {
+  margin: 10px 0px 10px 0px;
+  user-select: none;
+}
+
+.VidDisActBar span {
+  font-size: 11px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  display: flex;
+  flex: column;
+}
+
+.VidDisActBarLikes,
+.VidDisActBarDisLikes,
+.VidDisActBarShare,
+.VidDisActBarSave {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.VidDisContant {
+  border-top: 1px solid black;
+  min-height: 30px;
+  padding: .6rem 5px .6rem 12px;
+  line-height: 1.3;
+  font-size: .9rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  height: auto;
+  width: 100%;
+}
+
+.VidDisSubsribe {
+  height: auto;
+  padding: 12px 12px 12px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  overflow: auto;
+}
+
+.VidDisProfile {
+  border: 2px solid black;
+  border-radius: 50%;
+  margin-left: 8px;
+  width: 16vw;
+  height: 16vw;
+  overflow: hidden;
+}
+
+.VidDisChannelName {
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.VidDisSubsribeBtn {
+  background-color: black;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 16px;
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  user-select: none;
+
+}
+
+.VidDisInfo {
+  display: flex;
+  justify-content: space-around;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 550;
+  font-size: 1rem;
+  border-top: 1px solid black;
+  padding: .5rem 0;
+}
+
+.VidDisUploadDate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.VidDisClicks {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+
+/* MainBodyKnldge */
+
+.MainBodyKnldge {
+  background-color: #fff;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border: .001px solid black;
+  width: 100%;
+}
+
+.MainBodyBook {
+  height: 100%;
+  background: #fff;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  border: .0002px solid black;
+}
+
+.MainBodyBook h1 {
+  background-color: red;
+  color: #fff;
+  justify-content: center;
+  text-align: center;
+  margin-top: 30vh;
+
+}
+
+.MainBodyKnldge h1 {
+  background-color: red;
+  color: #fff;
+  justify-content: center;
+  text-align: center;
+  margin-top: 30vh;
+}
+
+/* NavBar Search Bar Inp */
+
+.NavBarMdlSearchInp {
+  width: 58vw;
+  height: 5vh;
+  border: 1px solid black;
+  border-radius: 8px 8px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.SearchInp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85%;
+  width: 95%;
+  font-size: 1rem;
+  outline: none;
+  padding: 5px 5px;
+  border-radius: 8px 8px;
+  border: none;
+  margin-bottom: 0px;
+}
+
+.MainBodySearch {
+  width: 100vw;
+  height: 86vh;
+  background-color: #fff;
+  display: none;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+
+.Resulth1 {
+  background-color: red;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.history-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon-container {
+  margin: 10px;
+
+}
+
+.iconify-icon {
+  color: #333;
+}
+
+.iconify-icon:nth-child(1) {
+  font-size: 30px;
+}
+
+.iconify-icon:nth-child(2) {
+  font-size: 25px;
+}
+
+.iconify-icon:nth-child(3) {
+  font-size: 30px;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border: 1.5px solid #000;
+  background-color: #fff;
+}
+
+.icon-container h5 {
+  margin-top: 9px;
+  letter-spacing: 1px;
+}
+
+.HistoryH4 {
+  padding: 4px;
+  text-align: center;
+}
+
+.HistoryH4 h4 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+}
+
+.HistoryBody {
+  background-color: #ffffff;
+  padding: 5px;
+  height: 64.1vh;
+  width: 100%;
+  border: 1px solid #ccc;
+  overflow: auto;
+}
+
+
+
+/* History Display Videos*/
+
+
+.video {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+
+.video img {
+  max-width: 100%;
+  height: auto;
+}
+
+.video h2 {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+.video p {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.HistoryBodyLiked {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  display: none;
+}
+
+.HistoryBodyDisliked {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  display: none;
+
+}
+
+.HistoryBodySaved {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  display: block;
+}
+
+.HistorySaved {
+  transition: all ease .5s;
+}
+
+.HistoryDisliked {
+  transition: all ease .5s;
+}
+
+.HistoryLiked {
+  transition: all ease .5s;
+}
+
+.Main {
+  display: block;
+}
+
+.MainProfileEdit {
+  height: 100vh;
+  width: 100vw;
+  display: none;
+}
+
+
+/* Profile Page css*/
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  z-index: 6;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  height: 98%;
+}
+
+.Title {
+  color: #000;
+  margin-bottom: 1rem;
+  letter-spacing: .5px;
+}
+
+.Title h1 {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.profile-picture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-picture .profile-pictureImg {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid black;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.profile-pictureImg img {
+  width: auto;
+  height: 100%;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #000;
+}
+
+.InpUsername,
+input[type="email"],
+input[type="file"],
+input[type="password"],
+input[type="date"],
+input[type="radio"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  outline: none;
+}
+
+button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.formGender {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.formGender input {
+  margin: -5px 10px 0px 10px;
+}
+
+.NavBarProfleLeft {
+  position: absolute;
+  margin: -5px 0 0 -8px;
+}
+
+.Logout {
+  margin: 10px 0;
+  background: #fff;
+  color: #000;
+  font-weight: 800;
+  border: 2px solid black;
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+
+}
+
+/* Knowledge Page*/
+.KnldgeBtns {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+  background: #fff;
+  margin: 5px 0;
+  width: 100%;
+  height: 8vh;
+}
+
+.KnldgeSubscribedBtn {
+  background: #fff;
+  width: 45%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1.5px solid black;
+  color: black;
+  transition: all ease .5s;
+
+}
+
+.KnldgeNotificationBtn {
+  background-color: black;
+  width: 45%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1.5px solid black;
+  color: #fff;
+  transition: all ease .5s;
+}
+
+.KnldgeSubscribed {
+  height: 89%;
+  display: none;
+  overflow: auto;
+}
+
+.KnldgeNotification {
+  height: 89%;
+  overflow: auto;
+}
+
+/* Subscribed page css */
+
+.subscription-list {
+  max-width: 800px;
+  margin: 2px auto;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subscription-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  height: 50px;
+}
+
+.channel-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 2px solid black;
+  overflow: hidden;
+}
+
+.channel-icon img {
+  height: 100%;
+  width: auto;
+}
+.channel-info {
+  flex: 1;
+}
+
+.channel-name {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.subscribe-button {
+  background-color: black;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 16px;
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  user-select: none;
+}
