@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #fff;
+      color: #000;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .Title{
+      color: #000;
+      margin-bottom: 1rem;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form-group,
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #000;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="file"],
+    input[type="Password"]{
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #000;
+      border-radius: 4px;
+      outline: none;
+    }
+
+    button {
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+
+    .formGender {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+
+    }
+
+    .formGender input,
+    .TermsCondition input {
+      margin: -5px 10px 0px 10px;
+    }
+
+    #registration-form {
+      border: 2px solid black;
+
+    }
+
+    h2 {
+      mar
+    }
+
+    .TermsCondition {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .TermsCondition label {
+      font-size: .95rem;
+    }
+  </style>
+  <title>Registration Form</title>
+</head>
+
+<body>
+  <div class="container">
+    <form id="registration-form">
+      <div class="Title">
+        <h1>Create an account
+        </h1>
+        <h3>It's quick and easy</h3>
+      </div>
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Username" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+      </div>
+      <div class="form-group">
+        <label for="Password">Password:</label>
+        <input type="Password" id="Password" name="Password" placeholder="Password" required>
+      </div>
+      <div class="form-group">
+        <label for="ConfirmPassword">Conform Password:</label>
+        <input type="Password" id="ConformPassword" name="ConformPassword" placeholder="ConformPassword" required>
+      </div>
+      <div class="form-group">
+        <label for="profile-pic">Profile Picture:</label>
+        <input type="file" id="profile-pic" name="profile-pic">
+      </div>
+      <div class="form-group">
+        <label for="dob">Date of Birth: DD/MM/YYYY</label>
+        <input type="text" id="dob" name="dob" placeholder="MM/DD/YYYY" required>
+      </div>
+
+      <div class="formGender">
+        <label>Gender :</label>
+
+        <input type="radio" id="male" name="gender" value="Male">
+
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="Female">
+
+        <label for="female">Female</label>
+      </div>
+      <div class="TermsCondition">
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I agree to the Terms and Condition</label>
+      </div>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+  <div class="ContainerOtpPage">
+    
+  </div>
+</body>
+
+</html>

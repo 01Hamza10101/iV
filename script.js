@@ -15,10 +15,10 @@ const MainBodySearch = document.querySelector('.MainBodySearch');
 
 let SearchWhereIm;
 
-let Videos = [
-  {
+let Videos = [{
+    Id: 'VsA',
     ThumImg: '/iV/Thumbnail.jpg',
-    ChannelProfImg: '/IMG-20230831-WA0000.jpg',
+    ChannelProfImg: '/iV/ProfilePic.jpg',
     ChannelProfLink: 'Url',
     VidTitle: 'Express Js Pro player',
     ChannelName: 'Bro',
@@ -33,79 +33,10 @@ let Videos = [
       Discription: 'content',
     }
   },
-  {
-    ThumImg: '/iV/Thumbnail.jpg',
-    ChannelProfImg: '/iV/ProfilePic.jpg',
-    ChannelProfLink: 'Url',
-    VidTitle: 'Node.js Basics',
-    ChannelName: 'Coder123',
-    VidClick: '150',
-    VidUpDate: '15 Feb 2023',
-    VideoCartPlay: {
-      VidUrl: '/iV/iV.mp4',
-      VidLikes: '8',
-      DisLikes: '5',
-      ShareLink: 'url',
-      AddToBook: 'url',
-      Discription: 'content',
-    }
-  },
-  {
-    ThumImg: '/iV/Thumbnail.jpg',
-    ChannelProfImg: '/iV/ProfilePic.jpg',
-    ChannelProfLink: 'Url',
-    VidTitle: 'Web Development Journey',
-    ChannelName: 'WebWizard',
-    VidClick: '120',
-    VidUpDate: '10 Mar 2023',
-    VideoCartPlay: {
-      VidUrl: '/iV/iV.mp4',
-      VidLikes: '15',
-      DisLikes: '3',
-      ShareLink: 'url',
-      AddToBook: 'url',
-      Discription: 'content',
-    }
-  },
-  {
-    ThumImg: '/iV/Thumbnail.jpg',
-    ChannelProfImg: '/iV/ProfilePic.jpg',
-    ChannelProfLink: 'Url',
-    VidTitle: 'Python Programming Tips',
-    ChannelName: 'Pythonista',
-    VidClick: '75',
-    VidUpDate: '5 Apr 2023',
-    VideoCartPlay: {
-      VidUrl: '/iV/iV.mp4',
-      VidLikes: '12',
-      DisLikes: '7',
-      ShareLink: 'url',
-      AddToBook: 'url',
-      Discription: 'content',
-    }
-  },
-  {
-    ThumImg: '/iV/Thumbnail.jpg',
-    ChannelProfImg: '/iV/ProfilePic.jpg',
-    ChannelProfLink: 'Url',
-    VidTitle: 'Machine Learning Fundamentals',
-    ChannelName: 'MLMaster',
-    VidClick: '200',
-    VidUpDate: '20 May 2023',
-    VideoCartPlay: {
-      VidUrl: '/iV/iV.mp4',
-      VidLikes: '25',
-      DisLikes: '2',
-      ShareLink: 'url',
-      AddToBook: 'url',
-      Discription: 'content',
-    }
-  },
 ];
 
 
 function VidL(Data, i) {
-
   let VideoCart = `
   <div class="VideoCartUpPart VideoCartUpPart${i}">
          <div class="Thumbnail" onclick="RunVidonClick(${Data,i})">
@@ -163,8 +94,6 @@ let VidPlgi = '';
 
 function RunVidonClick(i) {
   document.querySelector(`.VideoCartUpPart${i}`).style.display = "none";
-
-
 
   if (VidPlgi !== '') {
     document.querySelector(`.VideoCartUpPart${VidPlgi}`).style.display = "block";
@@ -252,11 +181,7 @@ NavBarleft.addEventListener('click', function(event) {
   };
 });
 
-
-
-
 /* FooterNavBarleft */
-
 
 const FooterNavBarleftBtn = document.querySelector('.FooterNavBarleft');
 const FooterNavBarMiddleBtn = document.querySelector('.FooterNavBarMiddle');
@@ -357,15 +282,11 @@ FooterNavBarRightBtn.addEventListener('dblclick', function() {
   }
 });
 
-
 //NavBar Search 
-
-
 
 NavBarSearchBtn.addEventListener('click', SearchSytm);
 
 let searchData;
-
 
 function SearchSytm() {
 
@@ -404,8 +325,6 @@ function SearchSytm() {
   }
 }
 
-
-
 //Search system
 
 function searchVideos(inputText) {
@@ -439,8 +358,6 @@ function SearchPage(SearchData) {
   MainBodySearch.style.display = 'flex';
   SearchData.forEach(VidSearchDsply);
 }
-
-
 
 function VidSearchDsply(Data, i) {
   let VideoCart = `
@@ -484,9 +401,6 @@ function VidSearchDsply(Data, i) {
   MainBodySearch.appendChild(div);
 }
 
-
-
-
 let VidPlgiSearch = '';
 
 function RunVidonClickSearch(i) {
@@ -498,15 +412,11 @@ function RunVidonClickSearch(i) {
     document.querySelector(`.VideoCartUpSearch${i}`).style.display = "none";
   }
 
-
   VideoCartPlay.style.display = "block";
   VidPlgiSearch = i;
 
-
-
   let Data = searchData[i];
   let VidCartPlay = `
-  
           <div class="VidPlay  VidPlaySearch">
            <video class="VidPlayVideo${i}" src="${Data.VideoCartPlay.VidUrl}" width="100%" controls></video>
           </div>
@@ -558,7 +468,6 @@ function RunVidonClickSearch(i) {
             </div>
           </div>
         `;
-
   let div = document.createElement('div');
   div.innerHTML = VidCartPlay;
   div.classList.add(`VidCartPlaySearch${i}`);
@@ -566,12 +475,10 @@ function RunVidonClickSearch(i) {
 
   document.querySelector(`.VideoCartLowSearch${i}`).appendChild(div);
 
-
   const targetElement = document.querySelector(`.VidPlayVideo${i}`);
 
   targetElement.scrollIntoView({ behavior: 'smooth' });
 };
-
 
 const HistoryBodyLiked = document.querySelector('.HistoryBodyLiked');
 
@@ -590,7 +497,7 @@ HistoryDislikedBtn.addEventListener('click', HistoryDisliked);
 
 HistorySavedBtn.addEventListener('click', HistorySaved);
 
-
+let YouLiked = [];
 
 function HistoryLiked() {
   HistoryBodyLiked.style.display = 'block';
@@ -609,6 +516,8 @@ function HistoryLiked() {
 
   HistorySavedBtn.style.backgroundColor = '';
   HistorySavedBtn.style.color = '';
+  
+  YouLiked.forEach(VidLikedDsply);
 };
 
 function HistoryDisliked() {
@@ -620,7 +529,6 @@ function HistoryDisliked() {
   HistorySavedBtn.style.marginTop = '';
   HistoryLikedBtn.style.marginTop = '';
 
-
   HistoryLikedBtn.style.color = '';
   HistoryLikedBtn.style.backgroundColor = '';
   HistoryDislikedBtn.style.color = '#fff';
@@ -628,7 +536,6 @@ function HistoryDisliked() {
 
   HistorySavedBtn.style.backgroundColor = '';
   HistorySavedBtn.style.color = '';
-
 };
 
 HistorySavedBtn.style.backgroundColor = 'black';
@@ -650,18 +557,13 @@ function HistorySaved() {
 
   HistorySavedBtn.style.backgroundColor = 'black';
   HistorySavedBtn.style.color = '#fff';
-
 };
 
 HistorySavedBtn.style.marginTop = '-12px';
 
-
-
 const NavBarRightProfileBtn = document.querySelector('.NavBarRightProfile');
 
 const MainProfileEdit = document.querySelector('.MainProfileEdit');
-
-
 
 NavBarRightProfileBtn.addEventListener('click', () => {
   Main.style.display = 'none';
@@ -678,7 +580,6 @@ NavBarProfleLeft.addEventListener('click', () => {
 
 });
 
-
 const KnldgeSubscribedBtn = document.querySelector('.KnldgeSubscribedBtn');
 
 const KnldgeNotificationBtn = document.querySelector('.KnldgeNotificationBtn');
@@ -687,67 +588,29 @@ const KnldgeSubscribed = document.querySelector('.KnldgeSubscribed');
 
 const KnldgeNotification = document.querySelector('.KnldgeNotification');
 
-
-
 KnldgeSubscribedBtn.addEventListener('click', function() {
   KnldgeSubscribed.style.display = 'block';
   KnldgeNotification.style.display = 'none';
-
   KnldgeSubscribedBtn.style.marginTop = '-4px';
   KnldgeNotificationBtn.style.marginTop = '';
   KnldgeSubscribedBtn.style.backgroundColor = 'black';
   KnldgeSubscribedBtn.style.color = 'white';
-
   KnldgeNotificationBtn.style.backgroundColor = '#fff';
   KnldgeNotificationBtn.style.color = 'black';
   KnldgeSubscribed.value = '';
-  
   SubscribedData.forEach(appendSubscribed);
 });
 
 KnldgeNotificationBtn.style.marginTop = '-4px';
 
-
-
 /*Subscribe Notification Page*/
 
 let NotificationVids = [
   {
+    Id: 'VsSearchA',
     ThumImg: '/iV/Thumbnail.jpg',
     ChannelProfImg: '/iV/ProfilePic.jpg',
-    ChannelProfLink: 'Url',
-    VidTitle: 'Express Js Notified Video',
-    ChannelName: 'Youth Bro',
-    VidClick: '50',
-    VidUpDate: '1 Jan 2023',
-    VideoCartPlay: {
-      VidUrl: '/iV/iV.mp4',
-      VidLikes: '10',
-      DisLikes: '20',
-      ShareLink: 'url',
-      AddToBook: 'url',
-      Discription: 'Working on express js ',
-    }
-  }, {
-    ThumImg: '/iV/Thumbnail.jpg',
-    ChannelProfImg: '/iV/ProfilePic.jpg',
-    ChannelProfLink: 'Url',
-    VidTitle: 'Express Js Notified Video',
-    ChannelName: 'Youth Bro',
-    VidClick: '50',
-    VidUpDate: '1 Jan 2023',
-    VideoCartPlay: {
-      VidUrl: '/iV/iV.mp4',
-      VidLikes: '10',
-      DisLikes: '20',
-      ShareLink: 'url',
-      AddToBook: 'url',
-      Discription: 'Working on express js ',
-    }
-  }, {
-    ThumImg: '/iV/Thumbnail.jpg',
-    ChannelProfImg: '/iV/ProfilePic.jpg',
-    ChannelProfLink: 'Url',
+    ChannelProfLink: 'url',
     VidTitle: 'Express Js Notified Video',
     ChannelName: 'Youth Bro',
     VidClick: '50',
@@ -812,17 +675,8 @@ function RunVidonClickNotfn(i) {
     document.querySelector(`.VideoCartUpNotfn${i}`).style.display = "none";
     document.querySelector(`.VideoCartLowNotfn${VidPlgiNotfn}`).innerHTML = "";
   } else {
-    // Uncomment this line if needed
     document.querySelector(`.VideoCartUpNotfn${i}`).style.display = "none";
   }
-
-  // Ensure that 'VideoCartPlay' is defined in your code
-  // let VideoCartPlay = document.getElementById('VideoCartPlay'); 
-
-  // Check if 'VideoCartPlay' is defined before modifying its style
-  // if (VideoCartPlay) {
-  //   VideoCartPlay.style.display = "block";
-  // }
 
   VidPlgiNotfn = i;
 
@@ -836,11 +690,11 @@ function RunVidonClickNotfn(i) {
       <p>${Data.VidTitle}</p>
     </div>
     <div class="VidDisActBar">
-      <div class="VidDisActBarLikes">
+      <div class="VidDisActBarLikes VidDisActBarLikes${i}" onclick="NotfnVidonLike(${i})">
         <iconify-icon icon="mdi:like-outline" width="25"></iconify-icon>
         <span>${Data.VideoCartPlay.VidLikes} Likes</span>
       </div>
-      <div class="VidDisActBarDisLikes">
+      <div class="VidDisActBarDisLikes VidDisActBarDisLikes${i}">
         <iconify-icon icon="mdi:dislike-outline" width="25"></iconify-icon>
         <span>${Data.VideoCartPlay.DisLikes} Dislikes</span>
       </div>
@@ -848,14 +702,14 @@ function RunVidonClickNotfn(i) {
         <iconify-icon icon="mdi:share" width="30"></iconify-icon>
         <span>share</span>
       </div>
-      <div class="VidDisActBarSave">
+      <div class="VidDisActBarSave VidDisActBarSave${i}">
         <iconify-icon icon="ic:outline-book" width="30"></iconify-icon>
         <span>save</span>
       </div>
     </div>
     <div class="VidDisSubsribe">
       <div class="VidDisProfile">
-        <img class="VideoProfileImg" src="/iV/ProfilePic.jpg" alt="">
+        <img class="VideoProfileImg" src="${Data.ChannelProfImg}" alt="">
       </div>
       <div class="VidDisChannelName">
         ${Data.ChannelName}
@@ -882,9 +736,10 @@ function RunVidonClickNotfn(i) {
   div.innerHTML = VidCartPlay;
   div.classList.add(`VidCartPlaySearch${i}`);
   div.style.height = '100%';
-
   document.querySelector(`.VideoCartLowNotfn${i}`).appendChild(div);
-}
+};
+
+
 
 /* For running Video play */
 KnldgeNotificationBtn.addEventListener('click', function() {
@@ -899,33 +754,19 @@ KnldgeNotificationBtn.addEventListener('click', function() {
   KnldgeSubscribedBtn.style.color = 'black';
   KnldgeNotification.innerHTML = '';
   NotificationVids.forEach(VidNotificationDsply);
-
 });
 
 /* Subscribed */
 
-
-let SubscribedData = Array.from({ length: 15 }, (_, i) => ({
-  channelIconUrl: '/IMG-20230831-WA0000.jpg',
-  channelName: `Channel ${i + 1}`,
-  IsSubscribed: 'true',
-}));
-
-
-/*
-[{
-  channelIconUrl:'/iV/ProfilePic.jpg',
-  channelName:'Bro Gaming',
-  IsSubscribed:'true',
-},{
+let SubscribedData = [{
+  Id: 'VsSubscribedA',
   channelIconUrl: '/iV/ProfilePic.jpg',
   channelName: 'Bro Gaming',
   IsSubscribed: 'true',
-}
-]*/
+}];
 
-
-function appendSubscribed(Data,i) {
+function appendSubscribed(Data, i) {
+  KnldgeSubscribed.innerHTML = '';
   let myVariable = `
      <div class="subscription-item">
       <div class="channel-icon">
@@ -936,9 +777,145 @@ function appendSubscribed(Data,i) {
        </div>
       <div class="subscribe-button">Subscribed</div>
             `;
-
   let newDiv = document.createElement("div");
   newDiv.classList.add("subscription-list");
   newDiv.innerHTML = myVariable;
   KnldgeSubscribed.appendChild(newDiv);
+};
+
+
+
+
+//Likeddisplay
+
+
+function NotfnVidonLike(i) {
+  HistoryBodyLiked.innerHTML = '';
+  console.log(i);
+  YouLiked.push(NotificationVids[i])
+  console.log(YouLiked);
+  //if(!YouLiked[i]){
+ // YouLiked[i].VideoCartPlay.VidLikes++;}
+};
+
+function VidLikedDsply(Data, i) {
+  let VideoCart = `
+  <div class="VideoCartUpPart VideoCartUpLiked${i}">
+    <div class="Thumbnail" onclick="RunVidonClickLiked(${i})">
+      <img src="${Data.ThumImg}" alt="">
+    </div>
+    <div class="VideoCartLower">
+      <div class="VideoProfile">
+        <img class="VideoProfileImg" src="${Data.ChannelProfImg}" alt="">
+      </div>
+      <div class="VideoTitle">
+        <div class="VideoTitleUpper">
+          ${Data.VidTitle}
+        </div>
+        <div class="VideoTitleLower">
+          <div class="ChannelName">
+            ${Data.ChannelName}
+          </div>
+          •
+          <div class="Clicks">
+            ${Data.VidClick} Clicks
+          </div>
+          •
+          <div class="VideoTimeAgo">
+            ${Data.VidUpDate}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="VideoCartLowLiked${i} VideoCartLowPart">
+  </div>
+  `;
+
+  let div = document.createElement('div');
+  div.innerHTML = VideoCart;
+  div.classList.add("VideoCart", `VideoCart${i}`);
+  HistoryBodyLiked.appendChild(div);
 }
+
+let VidPlgiLiked = '';
+
+function RunVidonClickLiked(i) {
+
+  if (VidPlgiNotfn !== '') {
+    document.querySelector(`.VideoCartUpLiked${VidPlgiNotfn}`).style.display = "block";
+    document.querySelector(`.VideoCartUpLiked${i}`).style.display = "none";
+    document.querySelector(`.VideoCartLowLiked${VidPlgiNotfn}`).innerHTML = "";
+  } else {
+    document.querySelector(`.VideoCartUpLiked${i}`).style.display = "none";
+  }
+
+  VidPlgiNotfn = i;
+
+  let Data = YouLiked[i];
+  let VidCartPlay = `
+  <div class="VidPlay  VidPlayLiked">
+    <video class="VidPlayVideo${i}" src="${Data.VideoCartPlay.VidUrl}" width="100%" controls></video>
+  </div>
+  <div class="VidDiscription">
+    <div class="VidDisTitle">
+      <p>${Data.VidTitle}</p>
+    </div>
+    <div class="VidDisActBar">
+      <div class="VidDisActBarLikes VidDisActBarLikes${i}" onclick="NotfnVidonLike(${i})">
+        <iconify-icon icon="mdi:like-outline" width="25"></iconify-icon>
+        <span>${Data.VideoCartPlay.VidLikes} Likes</span>
+      </div>
+      <div class="VidDisActBarDisLikes VidDisActBarDisLikes${i}">
+        <iconify-icon icon="mdi:dislike-outline" width="25"></iconify-icon>
+        <span>${Data.VideoCartPlay.DisLikes} Dislikes</span>
+      </div>
+      <div class="VidDisActBarShare">
+        <iconify-icon icon="mdi:share" width="30"></iconify-icon>
+        <span>share</span>
+      </div>
+      <div class="VidDisActBarSave VidDisActBarSave${i}">
+        <iconify-icon icon="ic:outline-book" width="30"></iconify-icon>
+        <span>save</span>
+      </div>
+    </div>
+    <div class="VidDisSubsribe">
+      <div class="VidDisProfile">
+        <img class="VideoProfileImg" src="${Data.ChannelProfImg}" alt="">
+      </div>
+      <div class="VidDisChannelName">
+        ${Data.ChannelName}
+      </div>
+      <div class="VidDisSubsribeBtn">
+        <span>Subscribe</span>
+      </div>
+    </div>
+    <div class="VidDisInfo">
+      <div class="VidDisClicks">
+        ${Data.VidClick}
+      </div>
+      <div class="VidDisUploadDate">
+        ${Data.VidUpDate}
+      </div>
+    </div>
+    <div class="VidDisContant">
+      ${Data.VideoCartPlay.Discription}
+    </div>
+  </div>
+  `;
+
+  let div = document.createElement('div');
+  div.innerHTML = VidCartPlay;
+  div.classList.add(`VidCartPlayLiked${i}`);
+  div.style.height = '100%';
+  document.querySelector(`.VideoCartLowLiked${i}`).appendChild(div);
+};
+
+//Logut btn 
+
+const Logout = document.querySelector('.Logout');
+
+Logout.addEventListener('click',function(event){
+  event.preventDefault();
+  window.location.href = '/iV/iVLogin.html';
+});

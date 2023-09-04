@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #fff;
+      color: #000;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .Title {
+      color: #000;
+      margin-bottom: 1rem;
+      letter-spacing:1px;
+      
+    }
+    .Title h3{
+      font-size: 1rem;
+    }
+    .form-group {
+      margin-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form-group,
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #000;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #000;
+      border-radius: 4px;
+      outline: none;
+    }
+
+    button[type="submit"] {
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    #login-form {
+      border: 2px solid black;
+    }
+
+    .links {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .NewUser {
+      margin: 10px 0;
+      background: #fff;
+      color: #000;
+      font-weight: 800;
+      border: 2px solid black;
+      width: 100%;
+      padding: 10px 20px;
+      border-radius: 4px;
+      letter-spacing: 1px;
+
+    }
+
+    
+  </style>
+  <title>Login Page</title>
+</head>
+
+<body>
+  <div class="container">
+    <form id="login-form">
+      <div class="Title">
+        <h2>Welcome iV </h2>
+        <h3>Log in to access your account</h3>
+      </div>
+      <div class="form-group">
+        <label for="Email">Email:</label>
+        <input type="Email" id="Email" name="Email" placeholder="Email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+      </div>
+      <button class="submitLogin" type="submit">Login</button>
+      <div class="links">
+        <a href="#">Forgot Password?</a>
+        <button class="NewUser">New User? Register Here</button>
+      </div>
+    </form>
+  </div>
+  <script src="/iV/iVloginscript.js"></script>
+</body>
+</html>
